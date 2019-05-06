@@ -14,4 +14,4 @@ services:
       - app.env
     entrypoint:
       - python
-      - python/bottle.py
+      - python/app.py
