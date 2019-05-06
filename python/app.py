@@ -2,7 +2,7 @@ from bottle import route, run
 from line import line
 
 @route('/line/<message>')
-def line(message):
+def line_message(message):
   line(message)
   return 'OK! message: ' + message
 
