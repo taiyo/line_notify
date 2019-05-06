@@ -1,0 +1,17 @@
+version: '3'
+services:
+  line:
+    restart: always
+    build: .
+    container_name: 'line'
+    working_dir: '/root/'
+    tty: true
+    ports:
+      - 8080:8080
+    volumes:
+      - ./python:/root/python
+    env_file:
+      - app.env
+    entrypoint:
+      - python
+      - python/bottle.py
